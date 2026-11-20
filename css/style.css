@@ -291,6 +291,87 @@ h2 {
   }
 }
 
+/* ==========================================================
+   10. HERO
+   ========================================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* ---------- Coluna esquerda: papel quadriculado ---------- */
+
+.hero__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: var(--pad);
+    background-color: var(--white);
+    background-image:
+      linear-gradient(rgba(0,0,0,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.hero__text {
+    max-height: 34ch;
+    font-size: 0.9rem;
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.hero__social-label {
+    margin-bottom: 8px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero__social ul {
+    display: flex;
+    gap: 12px;
+}
+
+/* ---------- Coluna direita: rosa + foto ---------- */
+.hero__right {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: clamp(32px, 6vw, 64px) var(--pad);
+    background: var(--pink);
+    border-top: var(--border);
+}
+
+.photo {
+    position: relative;
+    width: min(100%, 320px);
+    aspect-ratio: 4 / 5;
+    margin-bottom: 80px;
+    background: var(--black);
+    border: var(--border);
+    box-shadow: 8px 8px 0 var(--black);
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  inset: -16px 16px 16px -16px; 
+  background: var(--lime);
+  border: var(--border);
+  z-index: -1;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
