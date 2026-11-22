@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Germano Mualevangue | Portfólio</title>
+    <link rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -53,21 +55,20 @@
 
             <div class="hero_actions">
               <a href="#projects" class="btn btn--lime">
-                View my work
+                Ver meus trabalhos
                 <i
                   class="fa-solid fa-arrow-up-right-from-square"
                   aria-hidden="true"
                 ></i>
               </a>
-              <!-- TODO: confirma o nome do teu PDF em assets/ (minúsculas, sem espaços) -->
               <a href="assets/cv-germano.pdf" class="btn btn--white" download>
-                Download resume
+                Baixar currículo
                 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
               </a>
             </div>
 
             <div class="hero__social">
-              <p class="hero__social-label">Connect with me</p>
+              <p class="hero__social-label">Vamos nos conectar</p>
               <ul>
                 <li>
                   <a
@@ -103,9 +104,8 @@
 
           <div class="hero__right">
             <div class="photo">
-              <!-- TODO: troca por assets/foto.jpg (minúsculas!). Enquanto não tens, usa o placeholder. -->
               <img
-                src="https://placehold.co/400x500/png?text=Foto"
+                src="assets/foto.jpeg"
                 alt="Retrato de Germano Mualevangue"
                 width="400"
                 height="500"
@@ -122,6 +122,161 @@
             </div>
           </div>
         </section>
+
+          <!-- ============ SKILLS ============ -->
+
+          <section class="skills" id="skills" aria-labelledby="skills-title">
+
+            <div class="skills__label cell--purple">
+              <h2 id="skills-title">Skills <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></h2>
+            </div>
+
+                <ul class="skills__list">
+      <li class="skill">
+        <i class="devicon-html5-plain" aria-hidden="true"></i>
+        <span>HTML5</span>
+      </li>
+      <li class="skill">
+        <i class="devicon-css3-plain" aria-hidden="true"></i>
+        <span>CSS3</span>
+      </li>
+      <li class="skill">
+        <i class="devicon-javascript-plain" aria-hidden="true"></i>
+        <span>JavaScript</span>
+      </li>
+      <li class="skill">
+        <i class="devicon-python-plain" aria-hidden="true"></i>
+        <span>Python</span>
+      </li>
+      <li class="skill">
+        <i class="devicon-nodejs-plain" aria-hidden="true"></i>
+        <span>Node.js</span>
+      </li>
+      <li class="skill">
+        <i class="devicon-git-plain" aria-hidden="true"></i>
+        <span>Git</span>
+      </li>
+      <li class="skill">
+        <i class="devicon-github-original" aria-hidden="true"></i>
+        <span>GitHub</span>
+      </li>
+      <li class="skill">
+        <i class="devicon-postgresql-plain" aria-hidden="true"></i>
+        <span>PostgreSQL</span>
+      </li>
+      <li class="skill">
+        <i class="devicon-react-plain" aria-hidden="true"></i>
+        <span>React & React Native</span>
+      </li>
+    </ul>
+
+          </section>
+
+            <div class="main-row">
+
+    <!-- ---------- FEATURED PROJECTS ---------- -->
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+
+      <div class="projects__head">
+        <div class="projects__head-left">
+          <h2 id="projects-title">Featured Projects</h2>
+          <a href="pages/projects.html" class="btn btn--white btn--sm">
+            View all projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="carousel-controls">
+          <button type="button" class="arrow-btn" id="prev" aria-label="Projeto anterior">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="arrow-btn" id="next" aria-label="Próximo projeto">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel" id="carousel" role="region" aria-roledescription="carousel" aria-label="Projetos em destaque">
+
+        <ul class="carousel__track">
+
+          <li class="slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+            <article class="project-card">
+              <div class="project-card__media">
+                <!-- TODO: troca por assets/fastfood.jpg -->
+                <img src="https://placehold.co/800x360/png?text=FastFood+E-commerce" alt="Captura de ecrã do projeto FastFood E-commerce" width="800" height="360">
+              </div>
+              <div class="project-card__body">
+                <h3>FastFood E-commerce</h3>
+                <p>Loja online de comida rápida com catálogo de produtos, carrinho de compras e finalização de pedido.</p>
+                <ul class="tags">
+                  <li class="tag-sm">HTML</li>
+                  <li class="tag-sm">CSS</li>
+                  <li class="tag-sm">JavaScript</li>
+                </ul>
+                <a href="pages/projects.html#fastfood" class="btn btn--white btn--sm">
+                  View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="slide" role="group" aria-roledescription="slide" aria-label="2 de 3" hidden>
+            <article class="project-card">
+              <div class="project-card__media">
+                <!-- TODO: troca por assets/todo-app.jpg -->
+                <img src="https://placehold.co/800x360/png?text=To-Do+App" alt="Captura de ecrã do projeto To-Do App" width="800" height="360">
+              </div>
+              <div class="project-card__body">
+                <h3>To-Do App</h3>
+                <p>Aplicação de tarefas para criar, concluir e remover itens, organizada de forma simples e rápida.</p>
+                <ul class="tags">
+                  <li class="tag-sm">HTML</li>
+                  <li class="tag-sm">CSS</li>
+                  <li class="tag-sm">JavaScript</li>
+                </ul>
+                <a href="pages/projects.html#todo" class="btn btn--white btn--sm">
+                  View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="slide" role="group" aria-roledescription="slide" aria-label="3 de 3" hidden>
+            <article class="project-card">
+              <div class="project-card__media">
+                <!-- TODO: troca por assets/chat.jpg -->
+                <img src="https://placehold.co/800x360/png?text=Chat+em+tempo+real" alt="Captura de ecrã do projeto Chat em tempo real" width="800" height="360">
+              </div>
+              <div class="project-card__body">
+                <h3>Chat em tempo real</h3>
+                <p>Aplicação de mensagens em tempo real, com várias pessoas a conversar em simultâneo.</p>
+                <ul class="tags">
+                  <li class="tag-sm">JavaScript</li>
+                  <li class="tag-sm">Node.js</li>
+                  <li class="tag-sm">WebSocket</li>
+                </ul>
+                <a href="pages/projects.html#chat" class="btn btn--white btn--sm">
+                  View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="dots" id="dots" role="group" aria-label="Escolher projeto"></div>
+
+    </section>
+
+    <!-- ---------- CERTIFICATIONS (Fase 7) ---------- -->
+    <aside class="certs" id="certifications" aria-labelledby="certs-title">
+      <h2 id="certs-title">Certifications</h2>
+      <p>Entra na próxima fase.</p>
+    </aside>
+
+          </div>
+
       </main>
 
       <!-- ============ FOOTER ============ -->
@@ -152,26 +307,6 @@
               rel="noopener"
               aria-label="LinkedIn"
               ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              class="icon-btn"
-              href="https://www.linkedin.com/in/O-TEU-PERFIL"
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn"
-              ><i class="fa-brands fa-tiktok" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              class="icon-btn"
-              href="https://www.linkedin.com/in/O-TEU-PERFIL"
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn"
-              ><i class="fa-brands fa-youtube" aria-hidden="true"></i
             ></a>
           </li>
           <li>
