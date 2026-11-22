@@ -527,12 +527,6 @@ h2 {
   border-top: var(--border);
 }
 
-.certs {
-  padding: var(--pad);
-  background: var(--lime);
-  border-top: var(--border);
-}
-
 /* ==========================================================
    13. FEATURED PROJECTS
    ========================================================== */
@@ -677,6 +671,71 @@ h2 {
 .dot[aria-current="true"] {
   background: var(--black);
 }
+
+/* ==========================================================
+   CERTIFICATIONS
+   ========================================================== */
+
+.certs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+  padding: var(--pad);
+  background: var(--lime);
+  border-top: var(--border);
+}
+
+.certs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-height: 110px;
+  padding: 16px;
+  background: #eeeeee;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.certs__list li:nth-child(2) .cert-card {
+  background: #dddddd;
+}
+
+.certs__list li:nth-child(3) .cert-card {
+  background: #cccccc;
+}
+
+.cert-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--black);
+}
+
+.cert-card:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--black);
+}
+
+.cert-card > i {
+  font-size: 1.7rem;
+}
+.cert-card h3 {
+  font-size: 1rem;
+}
+.cert-card span {
+  font-size: 0.9rem;
+}
+
+
 
 @media (min-width: 768px) {
   .hero {
