@@ -992,6 +992,115 @@ h2 {
   box-shadow: var(--shadow-lg);
 }
 
+/* ==========================================================
+   17. CARDS DE CERTIFICAÇÃO (página interna)
+   ========================================================== */
+.cert-card--page {
+  position: relative;
+  counter-increment: proj; /* contador da Fase 9.5 */
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  min-height: 0;
+  padding: 36px 16px 16px; /* espaço em cima para o selo */
+  background: var(--white);
+}
+
+.cert-card--page::before {
+  content: counter(proj, decimal-leading-zero);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 10px;
+  background: var(--black);
+  color: var(--lime);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.cert-card--page > i {
+  font-size: 1.4rem;
+}
+
+.cert-card--page h2 {
+  font-size: 1rem;
+}
+
+.cert-card--page p {
+  font-size: 0.8rem;
+}
+
+.cert-card--page .btn {
+  margin-top: auto;
+} /* botões alinhados em baixo */
+
+/* cores alternadas, como na identidade do site */
+.cert-card--page:nth-child(3n + 2) {
+  background: var(--lime);
+}
+.cert-card--page:nth-child(3n + 3) {
+  background: var(--pink);
+}
+
+/* ==========================================================
+   18. AJUSTES DE RESPONSIVIDADE
+   ========================================================== */
+
+/* 1. Título do hero: escala com cuidado para não estourar a coluna */
+.hero h1 {
+  font-size: clamp(2.2rem, 1rem + 4.2vw, 5rem);
+  overflow-wrap: anywhere;
+}
+
+/* 2. Cartão de código: nunca maior que o bloco rosa */
+.code-card {
+  max-width: calc(100% - 32px);
+  overflow-x: auto;
+}
+@media (max-width: 479px) {
+  .code-card {
+    font-size: 0.62rem;
+    padding: 10px 12px;
+  }
+  .photo {
+    width: min(100%, 260px);
+  }
+}
+
+/* 3. Ecrãs muito estreitos */
+@media (max-width: 380px) {
+  .logo,
+  .header-cta {
+    padding: 12px 12px;
+    font-size: 0.7rem;
+  }
+  .site-nav ul {
+    gap: 6px 18px;
+  }
+}
+
+/* 4. Tablet (768-899px): linha principal e final ainda empilhadas,
+      por isso damos mais respiro aos blocos */
+@media (min-width: 768px) and (max-width: 899px) {
+  .certs__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .certs__list li {
+    flex: 1 1 200px;
+  }
+  .cta {
+    min-height: 220px;
+  }
+}
+
+/* 5. Ecrãs grandes: o frame não estica infinitamente */
+@media (min-width: 1440px) {
+  .frame {
+    max-width: 1280px;
+  }
+}
+
 /* ---------- entrada pop-up com bounce ---------- */
 @keyframes pop {
   from {
