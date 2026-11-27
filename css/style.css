@@ -1169,3 +1169,91 @@ h2 {
     border-left: var(--border);
   }
 }
+
+/* ==========================================================
+   21. AVISO "EM CONSTRUÇÃO" (imagem grande, centrada, a flutuar)
+   ========================================================== */
+.wip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.wip__img {
+  width: clamp(260px, 45vw, 380px);
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+.wip__text {
+  font-size: 0.85rem;
+}
+.wip__text strong {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.page-grid > .wip {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+
+/* .wip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 16px;
+  text-align: center;
+  background: var(--white);
+  border: var(--border);
+  box-shadow: var(--shadow);
+}
+
+.wip__img {
+  width: clamp(160px, 30vw, 260px);
+  height: auto;                      
+  animation: float 3s ease-in-out infinite;
+}
+
+.wip__text {
+  max-width: 40ch;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.wip__text strong {
+  display: block;
+  margin-bottom: 2px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.page-grid > .wip {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+} */
